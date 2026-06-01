@@ -320,7 +320,7 @@ h3 {
 } */
 
 #intro.section {
-  background: #A9A9A9 repeat;
+  background: #d3d3d3 repeat;
   position: relative;
 }
 
@@ -356,7 +356,8 @@ h3 {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  background: none;
   height: 100%;
   left: 0;
   position: absolute;
@@ -549,7 +550,7 @@ small {
 /* main .teal-text */
 
 .teal-text {
-  color: #A9A9A9 !important;
+  color: #63666A /*#a9a9a9*/ !important;
 }
 
 /* .teal-text {
@@ -559,7 +560,7 @@ small {
 /* .teal */
 
 .teal {
-  background-color: #d3d3d3 !important;
+  background-color: #63666A /*#a9a9a9*/ !important;
 }
 
 /* .teal {
