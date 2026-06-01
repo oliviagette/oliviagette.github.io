@@ -549,7 +549,7 @@ small {
 /* main .teal-text */
 
 .teal-text {
-  color: #008073 !important;
+  color: #A9A9A9 !important;
 }
 
 /* .teal-text {
@@ -559,11 +559,11 @@ small {
 /* .teal */
 
 .teal {
-  background-color: #008073 !important;
+  background-color: #A9A9A9 !important;
 }
 
 /* .teal {
-  background-color: #00695c !important;
+  background-color: #63666A !important;
 } */
 
 @media (min-width: 1200px) {
