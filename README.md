@@ -3,7 +3,7 @@
 ### Website Preview
 <p align="center"> 
   <kbd>
-    <a href="https://oliviagette.github.io" target="_blank"><img src="examples/preview_o.png">
+    <a href="https://oliviagette.github.io" target="_blank"><img src="examples/preview.png">
   </a>
   </kbd>
 </p>
