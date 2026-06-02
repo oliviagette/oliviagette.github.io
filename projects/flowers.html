@@ -11,25 +11,55 @@
   <h2>Flower Image Classification Using Spark-Based Convolutional Neural Networks</h2>
 
   <p>
-    This project explores distributed deep learning with Apache Spark to classify flower images using Convolutional Neural Networks (CNNs)
+    This project explores distributed deep learning with Apache Spark to classify flower images using Convolutional Neural Networks (CNNs).
+    Using the Kaggle Flowers Recognition dataset, the model classifies images across five categories: daisy, dandelion, rose, sunflower, and tulip.
   </p>
+
+  <h4>Project Overview</h4>
+    <p>
+      The goal of this project was to evaluate how distributed computing can support image preprocessing
+      and CNN training across multiple virtual machines. Apache Spark was used for data handling and preprocessing,
+      while PyTorch was used to train the CNN model.
+    </p>
 
   <h4>Key Features</h4>
   <ul>
     <li>Distributed preprocessing using PySpark</li>
-    <li>CNN model with data augmentation and dropout</li>
-    <li>Improves model over 4 scripts and evaluating the success of each</li>
+    <li>Image resizing to 128x128 and normalization to [0,1]</li>
+    <li>CNN model with data augmentation, dropout, batch normalization, and learning rate scheduling</li>
+    <li>Iterative model improvement across four scripts</li>
     <li>Two-node Spark cluster (1 master, 1 worker)</li>
   </ul>
+
+  <h4>Dataset</h4>
+    <p>
+      Kaggle Flowers Recognition Dataset with five flower classes:
+      daisy, dandelion, rose, sunflower, and tulip.
+    </p>
+
+    <h4>Results</h4>
+    <p>
+      The final CNN model achieved <b>77.5% test accuracy</b>. Across four script iterations,
+      the model improved through deeper convolutional layers, batch normalization, data augmentation,
+      dropout, adaptive pooling, and a learning rate scheduler.
+    </p>
 
   <h4>Tools</h4>
   <p>
     Python, PySpark, NumPy, Pandas
   </p>
 
-  <a href="https://github.com/omgette/smallProject4" target="_blank" style="color: #2563eb;">
-    View on GitHub
-  </a>
+  <h4>Links</h4>
+    <p>
+      <a href="https://github.com/oliviagette/spark-flower-image-classification" target="_blank" style="color: #2563eb;">
+        View on GitHub
+      </a>
+    </p>
+    <p>
+      <a href="/assets/reports/Spark Flower Image Classification Report.pdf" target="_blank" style="color: #2563eb;">
+        View Project Report
+      </a>
+    </p>
 
 </div>
 
