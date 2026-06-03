@@ -37,6 +37,57 @@
       daisy, dandelion, rose, sunflower, and tulip.
     </p>
 
+  <h4>Model Improvements</h4>
+    <p>
+    The model was iteratively improved across four scripts. Below shows the progression from the
+    initial architecture to the final version.
+    </p>
+    
+    <div style="display: flex; gap: 20px; margin-bottom: 15px;">
+      <div>
+        <p><b>Initial Model (Script 1)</b></p>
+        <img src="/assets/img/flowersScript1.png" width="300">
+      </div>
+    
+      <div>
+        <p><b>Final Model (Script 4)</b></p>
+        <img src="/assets/img/flowersScript4.png" width="300">
+      </div>
+    </div>
+
+    <table>
+      <tr>
+        <th>Feature</th>
+        <th>Script 1</th>
+        <th>Final Model (Script 4)</th>
+      </tr>
+      <tr>
+        <td>Convolutional Layers</td>
+        <td>2</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Dropout</td>
+        <td>None</td>
+        <td>0.5</td>
+      </tr>
+      <tr>
+        <td>Batch Normalization</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Data Augmentation</td>
+        <td>None</td>
+        <td>Flip, rotation, color jitter</td>
+      </tr>
+      <tr>
+        <td>Learning Rate Scheduling</td>
+        <td>None</td>
+        <td>StepLR</td>
+      </tr>
+    </table>
+
     <h4>Results</h4>
     <p>
       The final CNN model achieved <b>77.5% test accuracy</b>. Across four script iterations,
@@ -46,7 +97,7 @@
 
   <h4>Tools</h4>
   <p>
-    Python, PySpark, NumPy, Pandas
+    Python, PySpark, PyTorch, NumPy, Pandas
   </p>
 
   <h4>Links</h4>
