@@ -128,11 +128,6 @@ body {
   font-size: 18px;
 }
 
-/* body {
-  color: black;
-  font-size: 18px;
-} */
-
 /* main a -- links */
 
 /* a {
@@ -144,15 +139,6 @@ a {
 }
 
 /* main blockqoute */
-
-/* blockquote {
-  border-left: 5px solid #795548;
-  color: #795548;
-  font-size: 125%;
-  font-weight: 400;
-  margin: 20px 0;
-  padding-left: 1.5rem;
-} */
 
 blockquote {
   border-left: 5px solid #795548;
@@ -194,11 +180,6 @@ nav i {
 
 /* main */
 
-/* main {
-  background: url(../../assets/img/bg.png) repeat;
-  padding-left: 190px;
-} */
-
 main {
   background: url(../../assets/img/bg.png) repeat;
   padding-left: 190px;
@@ -227,14 +208,6 @@ ul.side-nav li {
   padding: 0;
 }
 
-/* ul.side-nav.fixed a {
-  box-sizing: content-box;
-  color: rgb(48, 122, 207);
-  display: block;
-  line-height: 100%;
-  padding: 10px 0 12px;
-} */
-
 ul.side-nav.fixed a {
   box-sizing: content-box;
   color: #333333 /* rgb(16, 202, 56)*/ ;
@@ -247,14 +220,6 @@ ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
   border: none;
   font-weight: 200;
 }
-
-/* ul.side-nav.fixed li.logo {
-  background-color: #fafafa;
-  border-bottom: 1px solid #ddd;
-  box-sizing: content-box;
-  min-height: 90px;
-  padding: 30px 30px 40px;
-} */
 
 ul.side-nav.fixed li.logo {
   background-color: #fafafa;
@@ -276,6 +241,23 @@ ul.table-of-contents li:not(.logo) a.active, ul.table-of-contents li:not(.logo) 
 
 ul.side-nav.fixed.table-of-contents li:not(.logo) a span, ul#slide-out li:not(.logo) a span {
   color: #333 !important;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
 }
 
 li.logo span {
@@ -332,13 +314,6 @@ h3 {
   top: 0;
 }
 
-/* #intro.section .container *:not(span) {
-  font-weight: 300;
-  line-height: 150%;
-  padding: 0 30px;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-} */
-
 #intro.section .container *:not(span) {
   font-weight: 300;
   /* font-weight: 400; */
@@ -375,12 +350,6 @@ h3 {
   margin-bottom: 60px;
 }
 
-/* .card .role {
-  font-size: 1.25rem;
-  position: absolute;
-  right: 38px;
-  top: 35px;
-} */
 .card .role {
   font-size: 1.25rem;
   position: relative;
@@ -489,12 +458,24 @@ a.hoverline {
 
 /* main a.hoverline */
 
-/* a.hoverline:hover {
-  border-bottom: 3px solid #24305e !important;
-} */
-
 a.hoverline:hover {
   border-bottom: 3px solid #6F7378 !important;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background-color: #f3f4f6;
+  color: #111827;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid #ddd;
+}
+
+.back-button:hover {
+  background-color: #e5e7eb;
 }
 
 #skills .card.large {
@@ -582,10 +563,6 @@ small {
 .teal {
   background-color: #63666A /*#a9a9a9*/ !important;
 }
-
-/* .teal {
-  background-color: #63666A !important;
-} */
 
 @media (min-width: 1200px) {
   #experience .container {
