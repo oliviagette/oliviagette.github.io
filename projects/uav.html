@@ -1,36 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pneumonia Detection Project</title>
+  <title>LiDAR UAV Collision Detection</title>
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
 
 <div class="container">
-  <h2>Pneumonia Detection with Spark-Based CNN</h2>
+  <a href="/#projects" class="back-button">← Back to Projects</a>
+  <h2>LiDAR UAV Collision Detection</h2>
 
   <p>
-    This project implements a distributed deep learning pipeline using Apache Spark
-    to classify chest X-ray images as pneumonia or normal.
+    This project focuses on using sensor data and machine learning techniques to detect potential
+    unmanned aerial vehicle (UAV) collisions. The goal is to analyze flight trajectories and
+    environmental data to identify conditions that may lead to collisions and improve UAV safety.
+  </p>
+
+  
+  <h4>Project Overview</h4>
+  <p>
+    The objective of this project was to build a data-driven approach for detecting possible UAV
+    collision events. By processing and analyzing flight-related data, the project explores how
+    machine learning models can identify risky flight patterns. The work emphasizes feature
+    engineering, data preprocessing, and model evaluation to distinguish between safe and
+    potentially unsafe flight scenarios.
   </p>
 
   <h4>Key Features</h4>
   <ul>
-    <li>Distributed preprocessing using PySpark</li>
-    <li>CNN model with batch normalization and dropout</li>
-    <li>Early stopping and model checkpointing</li>
-    <li>Multi-node Spark cluster (1 master, 3 workers)</li>
+    <li>Data preprocessing and cleaning of UAV flight datasets</li>
+    <li>Feature extraction from trajectory and sensor data</li>
+    <li>Machine learning models to classify collision vs non-collision scenarios</li>
+    <li>Evaluation of model performance using classification metrics</li>
+    <li>Visualization of flight patterns and model outputs</li>
   </ul>
+  
+  <h4>Dataset</h4>
+  <p>
+    The project uses UAV flight and sensor data, including positional and motion-related features,
+    to model and detect potential collision scenarios.
+  </p>
+  
+  <h4>Model Approach</h4>
+  <p>
+    The pipeline involves preprocessing UAV sensor data, extracting meaningful features from
+    trajectory information, and training classification models to identify collision risks.
+    Different modeling approaches were explored to improve detection accuracy and reduce false positives.
+  </p>
+  
+  <h4>Results</h4>
+  <p>
+    The model successfully identifies patterns associated with potential collisions, demonstrating
+    how machine learning can be applied to improve UAV safety systems. The results highlight the
+    importance of feature engineering and data preprocessing in building reliable predictive models.
+  </p>
 
   <h4>Tools</h4>
   <p>
-    Python, PyTorch, PySpark, NumPy
+    C#, Unity
   </p>
 
-  <a href="https://github.com/omgette/finalProject" target="_blank" style="color: #2563eb;">
-    View on GitHub
-  </a>
+  <h4>Links</h4>
+    <p>
+      <a href="https://github.com/oliviagette/uav-collision-detection" target="_blank" style="color: #2563eb;">
+        View on GitHub
+      </a>
+    </p>
+    <p>
+      <a href="/assets/reports/UAV Collision Detection Report.pdf" target="_blank" style="color: #2563eb;">
+        View Project Report
+      </a>
+    </p>
+
+  <div style="margin-top: 30px;">
+    <a href="/#projects" class="back-button">← Back to Projects</a>
+  </div>
 
 </div>
 
