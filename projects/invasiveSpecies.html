@@ -1,37 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pneumonia Detection Project</title>
+  <title>Invasive Species Classification Project</title>
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
 
 <div class="container">
-  <h2>Pneumonia Detection with Spark-Based CNN</h2>
+  <a href="/#projects" class="back-button">← Back to Projects</a>
+  <h2>Effective Invasive Plant Identification using Convolutional Neural Networks</h2>
 
   <p>
-    This project implements a distributed deep learning pipeline using Apache Spark
-    to classify chest X-ray images as pneumonia or normal.
+    This project applies convolutional neural networks (CNNs) to identify invasive plant species
+    using image data from a Brazilian national forest. The goal is to improve early detection and
+    response systems by automating plant classification and reducing reliance on manual inspection.
   </p>
 
+  
+  <h4>Project Overview</h4>
+    <p>
+      As part of a three-person team, this project evaluated multiple CNN architectures to determine
+      the most effective model for classifying invasive plant species. Both pretrained models and a
+      custom CNN were implemented and compared using performance metrics such as accuracy, precision,
+      recall, F1-score, and confusion matrices. The project emphasizes model selection, handling
+      imbalanced datasets, and improving classification performance for environmental applications.
+    </p>
+  
   <h4>Key Features</h4>
-  <ul>
-    <li>Distributed preprocessing using PySpark</li>
-    <li>CNN model with batch normalization and dropout</li>
-    <li>Early stopping and model checkpointing</li>
-    <li>Multi-node Spark cluster (1 master, 3 workers)</li>
-  </ul>
-
+    <ul>
+      <li>Comparison of five CNN architectures: VGG16, DenseNet, MobileNet, InceptionV3, and a custom model</li>
+      <li>Implementation of transfer learning for pretrained models</li>
+      <li>Custom CNN designed to reduce overfitting on a small, imbalanced dataset</li>
+      <li>Use of data augmentation and class weighting to improve generalization</li>
+      <li>Evaluation using accuracy, precision, recall, F1-score, and confusion matrices</li>
+    </ul>
+  
+  <h4>Dataset</h4>
+    <p>
+      Kaggle Invasive Species Monitoring dataset containing labeled plant images. The dataset includes
+      approximately 1,400+ images with class imbalance between invasive and non-invasive species.
+      Data preprocessing included normalization, train/validation/test splitting, and data augmentation
+      to improve model robustness.
+    </p>
+  
+  <h4>Model Approach</h4>
+    <p>
+      Multiple CNN architectures were evaluated, including both pretrained models and a custom-built
+      network. Transfer learning was used to leverage pretrained feature extractors, while the custom
+      CNN was designed with three convolutional layers and dropout to reduce overfitting. Class weights
+      and different classification thresholds were explored to balance precision and recall for detecting
+      invasive species.
+    </p>
+  
+  <h4>Results</h4>
+    <p>
+      The DenseNet model achieved the best overall performance, providing the strongest balance between
+      precision and recall. While some models achieved slightly higher accuracy, DenseNet produced the
+      best F1 score and most reliable detection of invasive species. A lower classification threshold
+      (0.4) was selected to prioritize recall and reduce missed detections, which is critical for
+      environmental monitoring tasks.
+    </p>
+  
+  <h4>My Contributions</h4>
+    <ul>
+      <li>Implemented and trained CNN models including VGG16, InceptionV3, MobileNet, DenseNet, and a custom architecture</li>
+      <li>Performed data preprocessing, augmentation, and class weighting to address imbalance</li>
+      <li>Evaluated models using multiple performance metrics and compared results across thresholds</li>
+      <li>Created visualizations for model accuracy, loss, and prediction outcomes</li>
+      <li>Contributed to analysis, report writing, and final presentation</li>
+    </ul>
+  
   <h4>Tools</h4>
-  <p>
-    Python, PyTorch, PySpark, NumPy
-  </p>
+    <p>
+      Python, TensorFlow / Keras, NumPy, Pandas, Scikit-learn, Matplotlib
+    </p>
+  
+  <h4>Links</h4>
+    <p>
+      <a href="https://github.com/oliviagette/invasive-species-identification" target="_blank" style="color:#2563eb;">
+        View on GitHub
+      </a>
+    </p>
+    <p>
+      <a href="/assets/reports/Invasive Species Classification Report.pdf" target="_blank" style="color: #2563eb;">
+        View Project Report
+      </a>
+    </p>
 
-  <a href="https://github.com/omgette/finalProject" target="_blank" style="color: #2563eb;">
-    View on GitHub
-  </a>
-
+  <div style="margin-top: 30px;">
+    <a href="/#projects" class="back-button">← Back to Projects</a>
+  </div>
+  
 </div>
 
 </body>
