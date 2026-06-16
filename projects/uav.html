@@ -12,53 +12,69 @@
   <h2>LiDAR UAV Collision Detection</h2>
 
   <p>
-    This project focuses on using sensor data and machine learning techniques to detect potential
-    unmanned aerial vehicle (UAV) collisions. The goal is to analyze flight trajectories and
-    environmental data to identify conditions that may lead to collisions and improve UAV safety.
+    This project explores collision detection and avoidance for UAV drones using reinforcement learning
+    and LiDAR-based perception. A simulated drone was trained in a Unity environment to safely navigate
+    toward a goal while avoiding obstacles using only LiDAR sensor inputs.
   </p>
-
   
   <h4>Project Overview</h4>
   <p>
-    The objective of this project was to build a data-driven approach for detecting possible UAV
-    collision events. By processing and analyzing flight-related data, the project explores how
-    machine learning models can identify risky flight patterns. The work emphasizes feature
-    engineering, data preprocessing, and model evaluation to distinguish between safe and
-    potentially unsafe flight scenarios.
+    As part of a four-person team, this project aimed to design and train a simulated UAV drone capable
+    of autonomous navigation and collision avoidance. A realistic 3D environment was built in Unity,
+    including obstacles and environmental conditions, and a reinforcement learning pipeline was used
+    to train the drone to reach a target location safely. The project demonstrates how LiDAR-based
+    sensing and reinforcement learning can be combined for navigation in unknown environments.
   </p>
-
+  
   <h4>Key Features</h4>
   <ul>
-    <li>Data preprocessing and cleaning of UAV flight datasets</li>
-    <li>Feature extraction from trajectory and sensor data</li>
-    <li>Machine learning models to classify collision vs non-collision scenarios</li>
-    <li>Evaluation of model performance using classification metrics</li>
-    <li>Visualization of flight patterns and model outputs</li>
+    <li>Unity-based simulation environment with realistic obstacles and flight physics</li>
+    <li>LiDAR-based sensing system using 3D point cloud data for environment perception</li>
+    <li>Reinforcement learning pipeline using Unity ML-Agents framework</li>
+    <li>Custom reward function to balance safety, efficiency, and goal completion</li>
+    <li>TensorBoard dashboard for tracking training progress and performance metrics</li>
   </ul>
   
-  <h4>Dataset</h4>
+  <h4>Dataset & Data Processing</h4>
   <p>
-    The project uses UAV flight and sensor data, including positional and motion-related features,
-    to model and detect potential collision scenarios.
+    LiDAR trajectory and sensor data were derived from external datasets and processed for use in
+    the simulation. Data preprocessing included aggregation, interpolation, and visualization of
+    3D point cloud and trajectory data to better understand drone movement and sensor behavior.
   </p>
   
   <h4>Model Approach</h4>
   <p>
-    The pipeline involves preprocessing UAV sensor data, extracting meaningful features from
-    trajectory information, and training classification models to identify collision risks.
-    Different modeling approaches were explored to improve detection accuracy and reduce false positives.
+    A reinforcement learning agent was trained using the Unity ML-Agents framework. The drone receives
+    LiDAR sensor data and state variables (position, velocity, orientation) as input and outputs control
+    actions for pitch, roll, yaw, and altitude. A custom reward function encourages efficient navigation,
+    penalizes collisions, and discourages inefficient paths. A multilayer perceptron (MLP) policy
+    network was used due to computational constraints.
   </p>
   
   <h4>Results</h4>
   <p>
-    The model successfully identifies patterns associated with potential collisions, demonstrating
-    how machine learning can be applied to improve UAV safety systems. The results highlight the
-    importance of feature engineering and data preprocessing in building reliable predictive models.
+    The trained agent demonstrated steady improvement over time, with increasing reward values,
+    reduced collision behavior, and smoother navigation trajectories. The final system achieved an
+    overall success rate of approximately <b>72–75%</b> in reaching the goal while avoiding obstacles.
+    Training metrics showed reduced episode failures, fewer timeouts, and more consistent success
+    episodes as learning progressed.
   </p>
-
+  
+  <h4>My Contributions</h4>
+  <ul>
+    <li>Explored and evaluated LiDAR datasets for potential model training and preprocessing use</li>
+    <li>Analyzed and visualized drone trajectory data and 3D point cloud sensor outputs</li>
+    <li>Contributed to reinforcement learning model fitting and evaluation</li>
+    <li>Built and refined the Unity simulation environment, including realistic obstacles</li>
+    <li>Created TensorBoard dashboards to track training performance and analyze results</li>
+    <li>Assisted with version control, debugging, and project collaboration</li>
+    <li>Contributed to reports and project presentations</li>
+    <li>Explored running the system on HPC infrastructure (limited by compatibility constraints)</li>
+  </ul>
+  
   <h4>Tools</h4>
   <p>
-    C#, Unity
+    C#, Unity, ML-Agents, Python, TensorFlow, TensorBoard, NumPy, Jupyter, Blender
   </p>
 
   <h4>Links</h4>
