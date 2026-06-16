@@ -41,6 +41,6 @@ I am currently seeking full-time opportunities beginning in May 2027 where I can
 Explore all of my projects here:  
 https://oliviagette.github.io
 
-<div style="text-align: left;">
+<!-- <div style="text-align: left;">
     <img src="https://github.com/oliviagette/oliviagette.github.io/blob/main/assets/img/oliviagette.jpg" alt="Olivia Gette" width="200" align="left">
-</div>
+</div> -->
