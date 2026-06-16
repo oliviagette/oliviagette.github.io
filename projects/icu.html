@@ -1,36 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pneumonia Detection Project</title>
+  <title>Predicting ICU Length of Stay using Spark Based Regression</title>
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
 
 <div class="container">
-  <h2>Pneumonia Detection with Spark-Based CNN</h2>
+  <a href="/#projects" class="back-button">← Back to Projects</a>
+  <h2>Predicting ICU Length of Stay using Spark Based Regression</h2>
 
   <p>
-    This project implements a distributed deep learning pipeline using Apache Spark
-    to classify chest X-ray images as pneumonia or normal.
+    This project uses Apache Spark for distributed data processing and regression modeling to predict
+    ICU (Intensive Care Unit) length of stay. Accurate length of stay prediction is important for
+    hospital resource planning, clinical decision support, and improving patient care strategies.
   </p>
-
+  
+  <h4>Project Overview</h4>
+    <p>
+      As part of a two-person team, this project explored how distributed computing can improve
+      preprocessing and modeling efficiency for large-scale clinical data. Using a subset of the
+      Kaggle HOSP &amp; ICU dataset, we implemented regression pipelines in PySpark and compared
+      baseline and non-linear models for predicting ICU length of stay. The project emphasizes
+      healthcare analytics, scalable computation, and model evaluation in a distributed environment.
+    </p>
+  
   <h4>Key Features</h4>
   <ul>
-    <li>Distributed preprocessing using PySpark</li>
-    <li>CNN model with batch normalization and dropout</li>
-    <li>Early stopping and model checkpointing</li>
-    <li>Multi-node Spark cluster (1 master, 3 workers)</li>
+    <li>Distributed preprocessing and modeling using Apache Spark across four virtual machines</li>
+    <li>ICU length of stay prediction using PySpark MLlib regression pipelines</li>
+    <li>Comparison of Linear Regression and Random Forest Regression models</li>
+    <li>Feature engineering with one-hot encoding, scaling, median imputation, and vector assembly</li>
+    <li>Performance comparison of 1-, 2-, 3-, and 4-node Spark cluster configurations</li>
   </ul>
-
+  
+  <h4>Dataset</h4>
+    <p>
+      The project used the Kaggle <i>HOSP &amp; ICU Datasets (100,000 med-data from 2001–2019)</i>
+      dataset, specifically the <code>ICUSTAYS.csv</code> file. The data included patient identifiers,
+      ICU admission and discharge times, and calculated length of stay values. Preprocessing focused
+      on cleaning invalid LOS values, handling missing data, and preparing features for regression.
+    </p>
+  
+  <h4>Model Approach</h4>
+    <p>
+      Two regression models were implemented and compared using the same preprocessing pipeline.
+      A Linear Regression model served as a baseline, while a Random Forest Regressor was used to
+      test whether a more flexible, non-linear model could improve predictive performance. Features
+      were assembled into a single vector, scaled with MinMaxScaler, and evaluated using RMSE and R².
+    </p>
+  
+  <h4>Performance Comparison</h4>
+    <p>
+      In addition to comparing regression models, the project measured Spark runtime performance
+      across different cluster sizes. The best runtime was achieved using two to three virtual machines,
+      reducing total runtime from <b>1.7 minutes to 1.4 minutes</b>, which represents roughly a
+      <b>20% improvement</b> over the single-node configuration.
+    </p>
+  
+  <table>
+    <tr>
+      <th>Configuration</th>
+      <th>Runtime</th>
+    </tr>
+    <tr>
+      <td>1 VM</td>
+      <td>1.7 min</td>
+    </tr>
+    <tr>
+      <td>2 VMs</td>
+      <td>1.4 min</td>
+    </tr>
+    <tr>
+      <td>3 VMs</td>
+      <td>1.4 min</td>
+    </tr>
+    <tr>
+      <td>4 VMs</td>
+      <td>1.5 min</td>
+    </tr>
+  </table>
+  
+  <h4>Results</h4>
+    <p>
+      The Random Forest Regressor slightly outperformed the Linear Regression baseline, achieving an
+      <b>RMSE of 9.567 days</b> and <b>R² of 0.059</b>, compared to the Linear Regression model’s
+      RMSE of 9.778 days and R² of 0.017. While the models showed limited predictive power, the
+      project successfully demonstrated the value of Spark for scalable clinical data analysis and
+      identified opportunities for improvement such as log-transformed targets and hyperparameter tuning.
+    </p>
+  
+  <h4>My Contributions</h4>
+  <ul>
+    <li>Developed most of the PySpark pipeline code, including preprocessing, feature engineering, and the Random Forest regression model</li>
+    <li>Helped configure the distributed Spark environment across multiple virtual machines</li>
+    <li>Collaborated on runtime evaluation across different cluster sizes</li>
+    <li>Contributed to project analysis, interpretation of results, and final report writing</li>
+  </ul>
+  
   <h4>Tools</h4>
-  <p>
-    Python, PyTorch, PySpark, NumPy
-  </p>
+    <p>
+      Python, PySpark, Spark MLlib, Hadoop HDFS, Pandas
+    </p>
+  
+  <h4>Links</h4>
+    <p>
+      <a href="https://github.com/omgette/finalProject" target="_blank" style="color: #2563eb;">
+        View on GitHub
+      </a>
+    </p>
+    <p>
+      <a href="/assets/reports/Predicting ICU Length of Stay Report.pdf" target="_blank" style="color: #2563eb;">
+        View Project Report
+      </a>
+    </p>
 
-  <a href="https://github.com/omgette/finalProject" target="_blank" style="color: #2563eb;">
-    View on GitHub
-  </a>
+  <div style="margin-top: 30px;">
+    <a href="/#projects" class="back-button">← Back to Projects</a>
+  </div>
 
 </div>
 
