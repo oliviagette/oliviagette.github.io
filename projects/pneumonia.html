@@ -8,29 +8,84 @@
 <body>
 
 <div class="container">
-  <h2>Pneumonia Detection with Spark-Based CNN</h2>
+  <h2>Spark-Based Deep Convolutional Neural Network for Pneumonia Detection in Chest X-Rays</h2>
 
   <p>
-    This project implements a distributed deep learning pipeline using Apache Spark
-    to classify chest X-ray images as pneumonia or normal.
+    This project builds a distributed deep learning pipeline for pneumonia detection in chest X-ray
+    images using Apache Spark for preprocessing and a custom Convolutional Neural Network (CNN) for
+    classification. The goal was to demonstrate how distributed computing can support scalable
+    medical imaging workflows in CPU-only environments.
   </p>
-
+  
+  <h4>Project Overview</h4>
+    <p>
+      As part of a two-person team, this project focused on classifying chest X-ray images as
+      <b>Normal</b> or <b>Pneumonia</b> using a custom CNN trained on a large pediatric chest X-ray dataset.
+      Apache Spark was used to build a distributed preprocessing pipeline capable of scanning image
+      directories, extracting labels, and creating reproducible train, validation, and test manifests
+      across a four-node cluster. PyTorch was then used to train and evaluate the CNN model.
+    </p>
+  
   <h4>Key Features</h4>
   <ul>
-    <li>Distributed preprocessing using PySpark</li>
-    <li>CNN model with batch normalization and dropout</li>
-    <li>Early stopping and model checkpointing</li>
-    <li>Multi-node Spark cluster (1 master, 3 workers)</li>
+    <li>Distributed preprocessing with Apache Spark across a 4-node cluster (1 master, 3 workers)</li>
+    <li>Automated manifest generation for train, validation, and test splits using HDFS</li>
+    <li>Custom CNN with strided convolutions, batch normalization, dropout, and adaptive average pooling</li>
+    <li>Image augmentation including flips, rotations, affine transforms, and random crops</li>
+    <li>Regularization with both L1 and L2 penalties to reduce overfitting</li>
   </ul>
-
+  
+  <h4>Dataset</h4>
+    <p>
+      Kaggle Chest X-Ray Pneumonia dataset containing 5,856 labeled pediatric chest X-ray images.
+      Although the original dataset includes three categories (Normal, Bacterial Pneumonia, and Viral
+      Pneumonia), this project simplified the task to binary classification: <b>Normal vs Pneumonia</b>.
+      Exploratory analysis showed substantial class imbalance, with pneumonia cases appearing much more
+      frequently than normal cases, motivating careful evaluation and model regularization.
+    </p>
+  
+  <h4>Model Approach</h4>
+    <p>
+      A custom CNN was developed to classify chest X-rays after distributed preprocessing in Spark.
+      Instead of max pooling, the architecture used strided convolutions for downsampling to preserve
+      spatial information. Batch normalization, dropout, adaptive average pooling, and both L1 and L2
+      regularization were incorporated to improve stability and reduce overfitting. Training was
+      monitored with validation accuracy, and early stopping was used to keep the best-performing model.
+    </p>
+  
+  <h4>Results</h4>
+    <p>
+      The best model achieved a <b>validation accuracy of 94.65%</b> at Epoch 4 before validation
+      performance began to decline, indicating overfitting beyond that point. The final selected model
+      achieved a <b>test accuracy of 80.45%</b>, with a <b>test loss of 0.4222</b> and a weighted
+      average <b>F1-score of 0.81</b>. The model showed strong performance in identifying normal cases,
+      while trading off some pneumonia recall in favor of higher precision.
+    </p>
+  
+  <h4>My Contributions</h4>
+  <ul>
+    <li>Conducted the full exploratory data analysis (EDA), including class imbalance and image statistics</li>
+    <li>Set up the GitHub repository and wrote the project README</li>
+    <li>Contributed to the CNN design and implementation, including augmentation and regularization choices</li>
+    <li>Helped write the final project report and synthesize technical findings</li>
+  </ul>
+  
   <h4>Tools</h4>
-  <p>
-    Python, PyTorch, PySpark, NumPy
-  </p>
-
-  <a href="https://github.com/omgette/finalProject" target="_blank" style="color: #2563eb;">
-    View on GitHub
-  </a>
+    <p>
+      Python, PySpark, PyTorch, Pandas, NumPy, HDFS
+    </p>
+  
+  <h4>Links</h4>
+    <p>
+      <a href="https://github.com/oliviagette/pneumonia-detection" target="_blank" style="color: #2563eb;">
+        View on GitHub
+      </a>
+    </p>
+    <p>
+      <a href="/assets/reports/Pneumonia Detection Report.pdf" target="_blank" style="color: #2563eb;">
+        View Project Report
+      </a>
+    </p>
 
 </div>
 
