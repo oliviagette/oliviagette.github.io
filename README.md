@@ -26,7 +26,7 @@
 
 ## About Me
 
-I am a graduate student at Michigan Technological University pursuing my M.S. in Data Science. I have experience in machine learning, data analytics, and building data-driven solutions across a range of applications, including healthcare, geographic infoprmation systems, and sensor-based systems. As a student-athlete, I bring strong discipline, teamwork, and leadership to my work, along with a passion for solving complex problems through data.
+I am a graduate student at Michigan Technological University pursuing my M.S. in Data Science. I have experience in machine learning, data analytics, and building data-driven solutions across a range of applications, including healthcare, geographic information systems, and sensor-based systems. As a student-athlete, I bring strong discipline, teamwork, and leadership to my work, along with a passion for solving complex problems through data.
 
 I am currently seeking full-time opportunities beginning in May 2027 where I can apply data-driven insights to impactful projects.
 
@@ -38,9 +38,8 @@ I am currently seeking full-time opportunities beginning in May 2027 where I can
 - **Specialized Skills**: Machine Learning, Statistical Modeling, Algorithm Design
 
 ## Projects Showcase
-
-### [Spark-Based CNN for Pneumonia Detection in Chest X-Rays](https://github.com/omgette/finalProject)
-This project implements a distributed deep learning pipeline using Apache Spark to classify chest X-ray images as pneumonia or normal.
+Explore all of my projects here:  
+https://oliviagette.github.io
 
 <div style="text-align: left;">
     <img src="https://github.com/oliviagette/oliviagette.github.io/blob/main/assets/img/oliviagette.jpg" alt="Olivia Gette" width="200" align="left">
