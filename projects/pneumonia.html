@@ -14,23 +14,23 @@
   <p>
     This project builds a distributed deep learning pipeline for pneumonia detection in chest X-ray
     images using Apache Spark for preprocessing and a custom Convolutional Neural Network (CNN) for
-    classification. The goal was to demonstrate how distributed computing can support scalable
+    classification. The goal was to show how distributed computing can support scalable
     medical imaging workflows in CPU-only environments.
   </p>
   
   <h4>Project Overview</h4>
     <p>
-      As part of a two-person team, this project focused on classifying chest X-ray images as
+      While working on a two-person team, this project focused on classifying chest X-ray images as
       <b>Normal</b> or <b>Pneumonia</b> using a custom CNN trained on a large pediatric chest X-ray dataset.
-      Apache Spark was used to build a distributed preprocessing pipeline capable of scanning image
-      directories, extracting labels, and creating reproducible train, validation, and test manifests
+      Apache Spark was used to build a distributed preprocessing pipeline that scans image
+      directories, extracts labels, and creates reproducible train, validation, and test sets
       across a four-node cluster. PyTorch was then used to train and evaluate the CNN model.
     </p>
   
   <h4>Key Features</h4>
   <ul>
     <li>Distributed preprocessing with Apache Spark across a 4-node cluster (1 master, 3 workers)</li>
-    <li>Automated manifest generation for train, validation, and test splits using HDFS</li>
+    <li>Using HDFS to automatically generate train, validation, and test sets</li>
     <li>Custom CNN with strided convolutions, batch normalization, dropout, and adaptive average pooling</li>
     <li>Image augmentation including flips, rotations, affine transforms, and random crops</li>
     <li>Regularization with both L1 and L2 penalties to reduce overfitting</li>
@@ -40,9 +40,9 @@
     <p>
       Kaggle Chest X-Ray Pneumonia dataset containing 5,856 labeled pediatric chest X-ray images.
       Although the original dataset includes three categories (Normal, Bacterial Pneumonia, and Viral
-      Pneumonia), this project simplified the task to binary classification: <b>Normal vs Pneumonia</b>.
+      Pneumonia), in this project we simplified the task to binary classification: <b>Normal vs Pneumonia</b>.
       Exploratory analysis showed substantial class imbalance, with pneumonia cases appearing much more
-      frequently than normal cases, motivating careful evaluation and model regularization.
+      frequently than normal cases, which resulted in careful evaluation and model regularization.
     </p>
   
   <h4>Model Approach</h4>
@@ -71,9 +71,9 @@
   <h4>My Contributions</h4>
   <ul>
     <li>Conducted the full exploratory data analysis (EDA), including class imbalance and image statistics</li>
-    <li>Set up the GitHub repository and wrote the project README</li>
     <li>Contributed to the CNN design and implementation, including augmentation and regularization choices</li>
-    <li>Helped write the final project report and synthesize technical findings</li>
+    <li>Set up the GitHub repository and wrote the project README</li>
+    <li>Helped write the final project report and add technical findings</li>
   </ul>
   
   <h4>Tools</h4>
