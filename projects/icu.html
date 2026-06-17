@@ -19,7 +19,7 @@
   
   <h4>Project Overview</h4>
     <p>
-      As part of a two-person team, this project explored how distributed computing can improve
+      While working in a team of two people, this project looked at how distributed computing can improve
       preprocessing and modeling efficiency for large-scale clinical data. Using a subset of the
       Kaggle HOSP &amp; ICU dataset, we implemented regression pipelines in PySpark and compared
       baseline and non-linear models for predicting ICU length of stay. The project emphasizes
@@ -38,7 +38,7 @@
   <h4>Dataset</h4>
     <p>
       The project used the Kaggle <i>HOSP &amp; ICU Datasets (100,000 med-data from 2001–2019)</i>
-      dataset, specifically the <code>ICUSTAYS.csv</code> file. The data included patient identifiers,
+      dataset, specifically the "ICUSTAYS.csv" file. The data included patient identifiers,
       ICU admission and discharge times, and calculated length of stay values. Preprocessing focused
       on cleaning invalid LOS values, handling missing data, and preparing features for regression.
     </p>
@@ -46,16 +46,16 @@
   <h4>Model Approach</h4>
     <p>
       Two regression models were implemented and compared using the same preprocessing pipeline.
-      A Linear Regression model served as a baseline, while a Random Forest Regressor was used to
-      test whether a more flexible, non-linear model could improve predictive performance. Features
-      were assembled into a single vector, scaled with MinMaxScaler, and evaluated using RMSE and R².
+      The Linear Regression model served as a baseline, while the Random Forest Regression model was used to
+      test whether a more flexible, non-linear model could improve performance. Features
+      were assembled into a single vector, scaled with MinMaxScaler, and evaluated using RMSE and R<sup>2</sup>.
     </p>
   
   <h4>Performance Comparison</h4>
     <p>
       In addition to comparing regression models, the project measured Spark runtime performance
       across different cluster sizes. The best runtime was achieved using two to three virtual machines,
-      reducing total runtime from <b>1.7 minutes to 1.4 minutes</b>, which represents roughly a
+      reducing total runtime from <b>1.7 minutes to 1.4 minutes</b>, which is roughly a
       <b>20% improvement</b> over the single-node configuration.
     </p>
   
@@ -88,7 +88,7 @@
     <tr>
       <th>Model</th>
       <th>RMSE</th>
-      <th>R²</th>
+      <th>R<sup>2</sup></th>
     </tr>
     <tr>
       <td>Linear Regression</td>
@@ -104,11 +104,11 @@
   
   <h4>Results</h4>
     <p>
-      The Random Forest Regressor slightly outperformed the Linear Regression baseline, achieving an
-      <b>RMSE of 9.567 days</b> and <b>R² of 0.059</b>, compared to the Linear Regression model’s
-      RMSE of 9.778 days and R² of 0.017. While the models showed limited predictive power, the
-      project successfully demonstrated the value of Spark for scalable clinical data analysis and
-      identified opportunities for improvement such as log-transformed targets and hyperparameter tuning.
+      The Random Forest Regression model performed slightly better than the Linear Regression baseline, achieving an
+      <b>RMSE of 9.567 days</b> and <b>R<sup>2</sup> of 0.059</b>, compared to the Linear Regression model’s
+      RMSE of 9.778 days and R<sup>2</sup> of 0.017. While the models showed limited predictive power, the
+      project successfully showed the value of Spark for scalable clinical data analysis and
+      identified opportunities for improvement such as log-transformed LOS and hyperparameter tuning.
     </p>
   
   <h4>My Contributions</h4>
