@@ -9,46 +9,49 @@
 
 <div class="container">
   <a href="/#projects" class="back-button">← Back to Projects</a>
-  <h2>End-to-End Fraud Analytics Pipeline using Snowflake, dbt, and Power BI</h2>
+  <h2>Fraud Detection Analysis and End-to-End Analytics Pipeline</h2>
 
   <p>
-    This project analyzes financial transaction data to identify fraud patterns, engineer risk features,
-    and build a complete analytics workflow from raw data ingestion to interactive dashboards. The work
-    combines exploratory data analysis, feature engineering, cloud data modeling, and business intelligence
-    to uncover device, location, and merchant-category fraud trends.
+    This project analyzes financial transaction data to identify fraud patterns, evaluate baseline
+    machine learning models, engineer risk features, and build a complete analytics workflow from raw
+    data ingestion to interactive dashboards. The work combines exploratory data analysis, statistical
+    modeling, feature engineering, cloud data modeling, and business intelligence to uncover device,
+    location, and merchant-category fraud trends.
   </p>
 
   <h4>Project Context</h4>
   <p>
-    This project extends a group assignment completed in <b>BA5200: IS Management and Data Analytics</b>,
-    where our team performed exploratory data analysis and evaluated a baseline fraud model. The group
-    portion included initial EDA, identifying class imbalance (5% fraud), building a baseline logistic
-    regression model, and producing the course report.
+    This project originated as a group assignment in <b>BA5200: IS Management and Data Analytics</b>.
+    As a team, we performed exploratory data analysis, identified class imbalance (5% fraud), built a
+    baseline logistic regression model, and produced the course report and presentation.
   </p>
   <p>
-    All advanced components—including the Snowflake data pipeline, dbt models, feature engineering,
-    multi-page Power BI dashboard, and portfolio documentation—were designed and implemented independently
-    as an extension of the original coursework.
+    After completing the course project, I independently extended the work by building a full
+    Snowflake → dbt → Power BI analytics pipeline, engineering new fraud-related features, and creating
+    a multi-page dashboard. All advanced data modeling, feature engineering, dashboard development,
+    and portfolio documentation were completed independently.
   </p>
 
   <h4>Project Overview</h4>
   <p>
-    The goal of this project was to transform raw transactional data into actionable fraud insights using
-    modern data engineering and BI tools. The workflow includes:
+    The goal of this project was to transform raw transactional data into actionable fraud insights
+    using modern data engineering, machine learning, and BI tools. The workflow includes:
     <ul>
+      <li>Exploratory data analysis and baseline ML modeling</li>
       <li>Ingesting and staging data in Snowflake</li>
       <li>Building feature-rich transformation models in dbt</li>
       <li>Engineering device, customer, and behavioral risk metrics</li>
       <li>Developing a multi-page Power BI dashboard</li>
-      <li>Evaluating baseline ML models and class imbalance challenges</li>
+      <li>Documenting class imbalance challenges and model limitations</li>
     </ul>
-    This project demonstrates end-to-end analytics capabilities suitable for fraud detection, risk scoring,
-    and operational intelligence.
+    This project demonstrates end-to-end analytics capabilities suitable for fraud detection, risk
+    scoring, and operational intelligence.
   </p>
 
   <h4>Key Features</h4>
   <ul>
-    <li>Full Snowflake -> dbt -> Power BI analytics pipeline</li>
+    <li>Full fraud detection workflow: EDA → modeling → feature engineering → dashboard</li>
+    <li>Snowflake → dbt → Power BI analytics pipeline</li>
     <li>Feature engineering including device_fraud_count, customer variety metrics, and velocity fields</li>
     <li>Multi-page dashboard covering fraud overview, device risk, location risk, and category-level analysis</li>
     <li>Interactive slicers, drilldowns, maps, bar charts, and KPI cards</li>
@@ -64,8 +67,8 @@
       <li>Binary fraud labels</li>
       <li>Demographic attributes such as age group and account type</li>
     </ul>
-    Data was loaded into Snowflake, cleaned in staging models, and transformed into analytics-ready marts
-    using dbt.
+    Data was loaded into Snowflake, cleaned in staging models, and transformed into analytics-ready
+    marts using dbt.
   </p>
 
   <h4>Data Modeling Approach</h4>
@@ -105,21 +108,21 @@
 
   <h4>Results</h4>
   <p>
-    The dashboard revealed clear fraud patterns across device types, merchant categories, and geographic
+    The analysis revealed clear fraud patterns across device types, merchant categories, and geographic
     regions. Device-related features (e.g., <i>device_fraud_count</i>) provided the strongest signal for
-    identifying high-risk behaviors. The project also demonstrated that baseline ML models achieved high
-    accuracy due to class imbalance, highlighting the importance of engineered features and domain-driven
-    analytics.
+    identifying high-risk behaviors. Baseline ML models achieved high accuracy due to class imbalance,
+    highlighting the importance of engineered features and domain-driven analytics.
   </p>
 
   <h4>My Contributions</h4>
   <ul>
-    <li>Extended the original BA5200 group project by independently building a full Snowflake → dbt → Power BI analytics workflow</li>
+    <li>Wrote most of the Python code for EDA and baseline modeling during the group project</li>
+    <li>Contributed half of the written report and half of the final presentation</li>
+    <li>Independently built the full Snowflake → dbt → Power BI analytics pipeline</li>
     <li>Designed and implemented all dashboard pages, visuals, slicers, drilldowns, and KPI cards</li>
     <li>Created all dbt staging, transformation, and mart models used in the dashboard</li>
     <li>Engineered new fraud-related features including device_fraud_count, customer variety metrics, and velocity fields</li>
-    <li>Performed exploratory data analysis to identify fraud patterns and risk indicators</li>
-    <li>Evaluated baseline ML models and documented class imbalance challenges</li>
+    <li>Performed extended exploratory data analysis to identify fraud patterns and risk indicators</li>
     <li>Developed the complete portfolio write-up and documentation</li>
   </ul>
 
