@@ -13,54 +13,50 @@
 
   <p>
     This project analyzes financial transaction data to identify fraud patterns, evaluate baseline
-    machine learning models, engineer risk features, and build a complete analytics workflow from raw
-    data ingestion to interactive dashboards. The work combines exploratory data analysis, statistical
-    modeling, feature engineering, cloud data modeling, and business intelligence to uncover device,
+    machine learning models, manipulate risk features, and build an analytics workflow from raw
+    data to interactive dashboards. The work includes exploratory data analysis, statistical
+    modeling, feature engineering, cloud data modeling, and business intelligence to look at device,
     location, and merchant-category fraud trends.
   </p>
 
   <h4>Project Context</h4>
   <p>
-    This project originated as a group assignment in BA5200: IS Management and Data Analytics.
+    This project started as a group assignment in BA5200: IS Management and Data Analytics.
     As a team, we performed exploratory data analysis, identified class imbalance (5% fraud), built a
     baseline logistic regression model, and produced the course report and presentation.
   </p>
   <p>
     After completing the course project, I independently extended the work by building a full
     Snowflake + dbt + Power BI analytics pipeline, engineering new fraud-related features, and creating
-    a multi-page dashboard. All advanced data modeling, feature engineering, dashboard development,
-    and portfolio documentation were completed independently.
+    a multi-page dashboard. 
   </p>
 
   <h4>Project Overview</h4>
   <p>
-    The goal of this project was to transform raw transactional data into actionable fraud insights
-    using modern data engineering, machine learning, and BI tools. The workflow includes:
+    The goal of this project was to transform raw transactional data into usable fraud insights
+    using data engineering, machine learning, and BI tools. The workflow includes:
     <ul>
       <li>Exploratory data analysis and baseline ML modeling</li>
-      <li>Ingesting and staging data in Snowflake</li>
-      <li>Building feature-rich transformation models in dbt</li>
-      <li>Engineering device, customer, and behavioral risk metrics</li>
+      <li>Loading in and staging data in Snowflake</li>
+      <li>Building transformation models in dbt</li>
+      <li>Writing device, customer, and behavioral risk metrics</li>
       <li>Developing a multi-page Power BI dashboard</li>
-      <li>Documenting class imbalance challenges and model limitations</li>
+      <li>Documenting challenges and model limitations</li>
     </ul>
-    This project demonstrates end-to-end analytics capabilities suitable for fraud detection, risk
-    scoring, and operational intelligence.
   </p>
 
   <h4>Key Features</h4>
   <ul>
-    <li>Full fraud detection workflow: EDA → modeling → feature engineering → dashboard</li>
-    <li>Snowflake → dbt → Power BI analytics pipeline</li>
-    <li>Feature engineering including device_fraud_count, customer variety metrics, and velocity fields</li>
-    <li>Multi-page dashboard covering fraud overview, device risk, location risk, and category-level analysis</li>
-    <li>Interactive slicers, drilldowns, maps, bar charts, and KPI cards</li>
-    <li>Exploration of class imbalance and baseline model limitations</li>
+    <li>Fraud detection workflow: EDA → modeling → feature engineering → dashboard</li>
+    <li>Snowflake + dbt + Power BI analytics pipeline</li>
+    <li>Feature engineering including device fraud count, customer variety metrics, and velocity fields</li>
+    <li>Multi-page dashboard including fraud overview, device risk, location risk, and category-level analysis</li>
+    <li>Interactive slicers, bar charts, and KPI cards</li>
   </ul>
 
   <h4>Dataset</h4>
   <p>
-    The dataset contains over 200,000 synthetic financial transactions with:
+    The dataset contains over 200,000 generated financial transactions with:
     <ul>
       <li>Device, location, merchant category, and customer identifiers</li>
       <li>Transaction timestamps and amounts</li>
@@ -75,11 +71,11 @@
   <p>
     The dbt layer includes:
     <ul>
-      <li><b>Staging models</b> to standardize raw fields and enforce data types</li>
-      <li><b>Feature engineering</b> for device_fraud_count, customer transaction variety, and velocity metrics</li>
-      <li><b>Analytic marts</b> for fraud overview, device risk, customer profiles, and category-level insights</li>
+      <li>Staging models to standardize raw fields and correct data types</li>
+      <li>Feature engineering for device fraud count, customer transaction variety, and velocity metrics</li>
+      <li>Analytic marts for fraud overview, device risk, customer profiles, and category-level insights</li>
     </ul>
-    These models feed directly into Power BI through Snowflake connections.
+    These models are put directly into Power BI using Snowflake connections.
   </p>
 
   <h4>Dashboard Design</h4>
@@ -88,11 +84,9 @@
     <ul>
       <li><b>Fraud Overview:</b> KPIs, fraud rate, fraud amount, category-level risk</li>
       <li><b>Device Risk:</b> device_fraud_count, device-type fraud rates, drilldown table</li>
-      <li><b>Location Risk:</b> geographic fraud hotspots and regional patterns</li>
-      <li><b>Category Risk:</b> merchant category, age group, account type, and device type fraud rates</li>
-      <li><b>Customer Profiles:</b> customer-level metrics and risk indicators</li>
+      <li><b>Velocity & Behavioral Risk:</b> visualizes high‑velocity activity and behavioral anomalies linked to fraud</li>
     </ul>
-    Visuals include bar charts, maps, scatter plots, KPI cards, and slicers for interactive filtering.
+    Visuals include bar charts, KPI cards, and slicers for interactive filtering.
   </p>
 
   <div style="display: flex; gap: 20px; margin-bottom: 15px;">
@@ -104,6 +98,7 @@
       <p><b>Device Risk Screenshot</b></p>
       <img src="/assets/img/device_risk.png" width="600" height="300">
     </div>
+    <br>
     <div>
       <p><b>Velocity & Behavioral Risk Screenshot</b></p>
       <img src="/assets/img/behavior_risk.png" width="600" height="300">
@@ -112,20 +107,20 @@
 
   <h4>Results</h4>
   <p>
-    The analysis revealed clear fraud patterns across device types, merchant categories, and geographic
-    regions. Device-related features (e.g., <i>device_fraud_count</i>) provided the strongest signal for
+    The analysis showed fraud patterns across device types, merchant categories, and geographic
+    locations. Device-related features looked to have the strongest correlation to
     identifying high-risk behaviors. Baseline ML models achieved high accuracy due to class imbalance,
     highlighting the importance of engineered features and domain-driven analytics.
   </p>
 
   <h4>My Contributions</h4>
   <ul>
-    <li>Wrote most of the Python code for EDA and baseline modeling during the group project</li>
-    <li>Contributed half of the written report and half of the final presentation</li>
-    <li>Independently built the full Snowflake → dbt → Power BI analytics pipeline</li>
-    <li>Designed and implemented all dashboard pages, visuals, slicers, drilldowns, and KPI cards</li>
+    <li>Wrote most of the Python code for EDA and baseline modeling</li>
+    <li>Contributed heavily to the written report and final presentation</li>
+    <li>Independently built the full Snowflake + dbt + Power BI analytics pipeline</li>
+    <li>Designed and implemented all dashboard pages, visuals, slicers, and KPI cards</li>
     <li>Created all dbt staging, transformation, and mart models used in the dashboard</li>
-    <li>Engineered new fraud-related features including device_fraud_count, customer variety metrics, and velocity fields</li>
+    <li>Engineered new fraud-related features</li>
     <li>Performed extended exploratory data analysis to identify fraud patterns and risk indicators</li>
     <li>Developed the complete portfolio write-up and documentation</li>
   </ul>
